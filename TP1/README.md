@@ -30,7 +30,7 @@ Let $`V_h \subset \mathcal{H}_{0}^1(\left]a,b\right[)`$ with dimension $n$, and 
 
 $`\begin{equation}
 \begin{cases}
-\forall j \in \left[ 1,n \right], \sum\limits_{i=1}^n c_i\int_a^b\varphi'i(x)\varphi'j(x) , \mathrm{d}x = \int{a}^{b} f(x)\varphi_j(x) , \mathrm{d}x\\
+\forall j \in \left[ 1,n \right], \sum\limits_{i=1}^n c_i\int_a^b\varphi'i(x)\varphi'j(x) \mathrm{d}x = \int_{a}^{b} f(x)\varphi_j(x) \mathrm{d}x\\
 u_h(a) = u_h(b) = 0
 \end{cases}
 \end{equation}`$
@@ -39,8 +39,8 @@ Defining:
 
 $`\begin{equation}
 \begin{cases}
-R_{i,j} = \int_a^b\varphi'_i(x)\varphi'j(x) , \mathrm{d}x\\
-b_j = \int{a}^{b} f(x)\varphi_j(x) , \mathrm{d}x\
+R_{i,j} = \int_a^b\varphi'_i(x)\varphi'j(x) \mathrm{d}x\\
+b_j = \int_{a}^{b} f(x)\varphi_j(x) \mathrm{d}x\
 \end{cases}
 \end{equation}`$
 
@@ -56,9 +56,9 @@ R\vec{c} = \vec{b}
 
 The functions phi, phideriv, and their derivatives take parameters $x,x_m,k,i_{loc}$.
 
--$x_m$ is the interval mesh: $x_m = \bigcup\limits_{i=1}^n \left[x_{i},x_{i+1}\right]$\\
--$k$ is the index of the desired $\varphi_k$\\
--$i_{loc}$ is the local interval number.
+- $x_m$ is the interval mesh: $x_m = \bigcup\limits_{i=1}^n \left[x_{i},x_{i+1}\right]$\\
+- $k$ is the index of the desired $\varphi_k$\\
+- $i_{loc}$ is the local interval number.
 
 ## Numerical Integration
 
