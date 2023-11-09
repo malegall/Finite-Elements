@@ -68,6 +68,6 @@ We only need to sum $b_{iglob}$ over each interval $\left[x_{k},x_{k+1}\right]$,
 
 Finally, we add the boundary terms for the first and last terms of $\vec{b}$.
 
-## Assembly of $R$ and $M$
+## Assembly of $`R`$ and $`M`$
 
 The assembly of $R$ and $M$ is similar to that of $\vec{b}$, with the additional introduction of the index $j_{glob} = j_{loc}+k-1$. The process remains the same with the only difference being the functions being integrated.
