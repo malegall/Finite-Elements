@@ -74,7 +74,7 @@ We can then write $u$ as $u_h = \sum\limits_{i=1}^n c_i\varphi_i$.\\
 The discrete variational form is then:
 
 $`\begin{equation}
-        \forall j \in \llbracket 1,n \rrbracket, \sum\limits_{i=1}^n c_i(\int_a^b\varphi'_i(x)\varphi'_j(x) \, \mathrm{d}x + \int_a^b\varphi_i(x)\varphi_j(x) \, \mathrm{d}x) = \int_{a}^{b} f(x)\varphi_j(x) \, \mathrm{d}x
+        \forall j \in \left[ 1,n \right], \sum\limits_{i=1}^n c_i(\int_a^b\varphi'_i(x)\varphi'_j(x) \, \mathrm{d}x + \int_a^b\varphi_i(x)\varphi_j(x) \, \mathrm{d}x) = \int_{a}^{b} f(x)\varphi_j(x) \, \mathrm{d}x
 \end{equation}`$
 
 $`\forall i,j \in \left[ 1,n \right]`$, we define:
@@ -177,11 +177,11 @@ The main program is divided into 4 parts:
 
 ## Assembly of $`\vec{b}`$ 
 
-Since $\int_{a}^{b} f(x)\varphi_j(x) \, \mathrm{d}x = \sum\limits_{k=1}^{n}\int_{x_k}^{x_{k+1}} f(x)\varphi_j(x) \, \mathrm{d}x$, a loop over $k$ is introduced to assemble $\Vec{b}$. We then set $i_{glob} = i_{loc}+k-1$ to access all indices of $\Vec{b}$.\\
+Since $\int_{a}^{b} f(x)\varphi_j(x) \, \mathrm{d}x = \sum\limits_{k=1}^{n}\int_{x_k}^{x_{k+1}} f(x)\varphi_j(x) \, \mathrm{d}x$, a loop over $k$ is introduced to assemble $\vec{b}$. We then set $i_{glob} = i_{loc}+k-1$ to access all indices of $\vec{b}$.\\
 We simply sum $b_{iglob}$ over each interval $\left[x_{k},x_{k+1}\right]$ for all $i_{glob} \in \left[ 1,n \right]$.
 
 ## Assembly of $`R`$ and $`M`$
-The assembly of $`R`$ and $`M`$ is similar to that of $\Vec{b}$, but we introduce the additional index $j_{glob} = j_{loc}+k-1$. The process remains the same with the only difference being the integration of different functions.
+The assembly of $`R`$ and $`M`$ is similar to that of $\vec{b}$, but we introduce the additional index $j_{glob} = j_{loc}+k-1$. The process remains the same with the only difference being the integration of different functions.
 
 ## Differences in Assemblies
 
