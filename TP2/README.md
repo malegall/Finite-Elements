@@ -16,7 +16,7 @@ $`\begin{equation} \int_{a}^{b} u'(x)v'(x) \, \mathrm{d}x + \int_{a}^{b} u(x)v(x
 
 ## Discrete Problem
 
-Let $V_h \subset \mathcal{H}_0^1(\left]a,b\right[)$ with dimension $n$ and $(\varphi_i)_{1\leq i\leq n}$ be a basis for $V_h$.
+Let $`V_h \subset \mathcal{H}_0^1(\left]a,b\right[)`$ with dimension $n$ and $(\varphi_i)_{1\leq i\leq n}$ be a basis for $V_h$.
 
 We can write $u$ as $u_h = \sum\limits_{i=1}^n c_i\varphi_i$.
 
