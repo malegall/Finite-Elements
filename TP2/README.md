@@ -97,11 +97,11 @@ Le programme principal se décompose en 4 parties.
 - L'assemblage de $R$ et de $M$.
 - Le calcul et affichage de la solution.
 
-## L'assemblage de $'\vec{b}'$ 
+## L'assemblage de $`\vec{b}`$ 
 Comme $\int_{a}^{b} f(x)\varphi_j(x) \, \mathrm{d}x = \sum\limits_{k=1}^{n}\int_{x_k}^{x_{k+1}} f(x)\varphi_j(x) \, \mathrm{d}x$, on introduit une boucle $for$ sur $k$ pour assembler $\vec{b}$. \\On pose alors $i_{glob} = i_{loc}+k-1$ pour pouvoir accéder à tous les indices de $\vec{b}$.\\
 Il suffit donc de sommer $b_{iglob}$ sur chaque intervalle $\left[x_{k},x_{k+1}\right]$ et cela $\forall i_{glob} \in \left[ 1,n \right]$.
 
 On ajoute finalement les termes de bord pour le premier et dernier termes de $\Vec{b}$.
 
-## L'assemblage de $'R'$ et de $'M'$
+## L'assemblage de $`R`$ et de $`M`$
 L'assemblage de $R$ et de $M$ est similaire à celui de $\vec{b}$, il faut simplement introduire en plus l'indice $j_{glob} = j_{loc}+k-1$. Le processus reste ensuite le même à la simple différence que ce ne sont pas les mêmes fonctions que l'on intégre.
