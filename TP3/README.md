@@ -27,7 +27,7 @@ I have chosen the following Dirichlet conditions:
 $`\begin{cases}
     u(a) = 4\\
     u(b) = 2
-\end{cases}\\`$
+\end{cases}`$
 
 In the case of Dirichlet conditions, $u_{/\Gamma} = 0$. The variational form becomes:
 
@@ -116,6 +116,7 @@ $`\begin{cases}
 
 
 We obtain:
+
 $`\begin{equation}
     \begin{cases}
         A = -6-B\\
@@ -184,15 +185,15 @@ The assembly of $`R`$ and $`M`$ is similar to that of $\Vec{b}$, but we introduc
 
 ## Differences in Assemblies
 
-### Construction of $K$ and $b$ for Dirichlet Conditions
+### Construction of $`K`$ and $`b`$ for Dirichlet Conditions
 
-We extract the sub-matrix $newK$, which is the matrix $K$ without its first row, last row, first column, and last column.
+We extract the sub-matrix $`newK`$, which is the matrix $K$ without its first row, last row, first column, and last column.
 
-We create a new vector $newB$, which is the vector $b$ minus the first and last columns of $K$ multiplied by the respective boundary terms. We then extract the sub-vector without the first and last terms.
+We create a new vector $`newB`$, which is the vector $b$ minus the first and last columns of $K$ multiplied by the respective boundary terms. We then extract the sub-vector without the first and last terms.
 
-We solve $newK*u = newB$, and fix $u$ at the boundaries.
+We solve $`newK*u = newB`$, and fix $u$ at the boundaries.
 
-### Construction of $K$ and $b$ for Neumann Conditions
+### Construction of $`K`$ and $`b`$ for Neumann Conditions
 
 The right-hand side of (8) is the same as that for Dirichlet conditions, with the only difference that we add the IPP boundary terms:
 
@@ -205,16 +206,16 @@ $`\begin{equation}
 
 This time, we do not perform matrix and vector extractions. We directly solve $K*c = b$.
 
-### Construction of $K$ and $b$ for Mixed Conditions
+### Construction of $`K`$ and $`b`$ for Mixed Conditions
 
-The right-hand side of (8) is the same as that for Dirichlet conditions, with the only difference that we add the IPP boundary terms.\\
+The right-hand side of (8) is the same as that for Dirichlet conditions, with the only difference that we add the IPP boundary terms.
 
 $`\begin{equation}
     b_n = \int_{a}^{b} f(x)\varphi_n(x) \, \mathrm{d}x + u'(b)
 \end{equation}`$
 
-We extract the sub-matrix $newK$, which, this time, is the matrix $K$ without its first row and first column.
+We extract the sub-matrix $`newK`$, which, this time, is the matrix $`K`$ without its first row and first column.
 
-We create a new vector $newB$, which is the vector $b$ minus the first column of $K$ multiplied by the respective boundary term. We then extract the sub-vector without the first term.
+We create a new vector $`newB`$, which is the vector $b$ minus the first column of $K$ multiplied by the respective boundary term. We then extract the sub-vector without the first term.
 
-We solve $newK*u = newB$, and fix $u$ at the boundary.
+We solve $`newK*u = newB`$, and fix $u$ at the boundary.
