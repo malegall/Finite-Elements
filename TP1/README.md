@@ -6,7 +6,7 @@ We aim to solve the following differential equation on the interval $\left[a,b\r
 
 $`\begin{equation}\begin{cases} -u'' = f\\ u(a) = u(b) = 0 \end{cases}\end{equation}`$
 
-The variational form is obtained by multiplying equation (1) by a function $v \in \mathcal{H}0^1(\left]a,b\right[)$ and integrating over $\left[a,b\right]$:
+The variational form is obtained by multiplying equation (1) by a function $v \in \mathcal{H}_0^1(\left]a,b\right[)$ and integrating over $\left[a,b\right]$:
 
 $`\begin{equation}
 \begin{cases}
