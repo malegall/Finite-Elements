@@ -3,6 +3,7 @@
 ## Initial Problem
 
 We aim to solve the following differential equation on the interval $\left[a,b\right]$:
+
 \begin{equation}
 \begin{cases}
 -u'' = f\
