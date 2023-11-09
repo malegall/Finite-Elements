@@ -26,11 +26,11 @@ u(a) = u(b) = 0
 
 ## Discretized Problem
 
-Let $V_h \subset \mathcal{H}0^1(\left]a,b\right[)$ with dimension $n$, and $(\varphi_i){1\leq i\leq n}$ be a basis for $V_h$. We can represent $u$ as $u_h = \sum\limits_{i=1}^n c_i\varphi_i$. The variational form is then given by:
+Let $V_h \subset \mathcal{H}_0^1(\left]a,b\right[)$ with dimension $n$, and $(\varphi_i){1\leq i\leq n}$ be a basis for $V_h$. We can represent $u$ as $u_h = \sum\limits_{i=1}^n c_i\varphi_i$. The variational form is then given by:
 
 $`\begin{equation}
 \begin{cases}
-\forall j \in \llbracket 1,n \rrbracket, \sum\limits_{i=1}^n c_i\int_a^b\varphi'i(x)\varphi'j(x) , \mathrm{d}x = \int{a}^{b} f(x)\varphi_j(x) , \mathrm{d}x\\
+\forall j \in \left[ 1,n \right], \sum\limits_{i=1}^n c_i\int_a^b\varphi'i(x)\varphi'j(x) , \mathrm{d}x = \int{a}^{b} f(x)\varphi_j(x) , \mathrm{d}x\\
 u_h(a) = u_h(b) = 0
 \end{cases}
 \end{equation}`$
@@ -39,7 +39,7 @@ Defining:
 
 $`\begin{equation}
 \begin{cases}
-R{i,j} = \int_a^b\varphi'_i(x)\varphi'j(x) , \mathrm{d}x\
+R_{i,j} = \int_a^b\varphi'_i(x)\varphi'j(x) , \mathrm{d}x\\
 b_j = \int{a}^{b} f(x)\varphi_j(x) , \mathrm{d}x\
 \end{cases}
 \end{equation}`$
@@ -47,7 +47,7 @@ b_j = \int{a}^{b} f(x)\varphi_j(x) , \mathrm{d}x\
 We obtain the matrix system:
 
 $`\begin{equation}
-R\Vec{c} = \Vec{b}
+R\vec{c} = \vec{b}
 \end{equation}`$
 
 # MATLAB Programs
