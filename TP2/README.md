@@ -14,9 +14,11 @@ La forme variationnelle s'obtient en multipliant l'équation (1) par une fonctio
 
 $`\begin{equation}
         -\int_{a}^{b} u"(x)v(x) \, \mathrm{d}x + \int_{a}^{b} u(x)v(x) \, \mathrm{d}x = \int_{a}^{b} f(x)v(x) \, \mathrm{d}x
-\end{equation}
+\end{equation}`$
+
 On obtient, suite à une IPP, la forme variationnelle suivante:
-\begin{equation}
+
+$'\begin{equation}
         \int_{a}^{b} u'(x)v'(x) \, \mathrm{d}x + \int_{a}^{b} u(x)v(x) \, \mathrm{d}x = \int_{a}^{b} f(x)v(x) \, \mathrm{d}x + [u'(x)v(x)]_a^b
 \end{equation}`$
 
@@ -29,7 +31,7 @@ On peut alors écrire $u$ sous la forme $u_h = \sum\limits_{i=1}^n c_i\varphi_i$
 On a alors la forme variationnelle discrète suivante : 
 
 $`\begin{equation}
-        \forall j \in \llbracket 1,n \rrbracket, \sum\limits_{i=1}^n c_i(\int_a^b\varphi'_i(x)\varphi'_j(x) \, \mathrm{d}x + \int_a^b\varphi_i(x)\varphi_j(x) \, \mathrm{d}x) = \int_{a}^{b} f(x)\varphi_j(x) \, \mathrm{d}x + [u_h'(x)v_h(x)]_a^b
+        \forall j \in \left[ 1,n \right], \sum\limits_{i=1}^n c_i(\int_a^b\varphi'_i(x)\varphi'_j(x) \, \mathrm{d}x + \int_a^b\varphi_i(x)\varphi_j(x) \, \mathrm{d}x) = \int_{a}^{b} f(x)\varphi_j(x) \, \mathrm{d}x + [u_h'(x)v_h(x)]_a^b
 \end{equation}`$
 
 $`\forall i,j \in \llbracket 1,n \rrbracket`$, on pose :
@@ -91,13 +93,13 @@ J'ai utilisé la même programmation des fonctions $\varphi$ que pour le TP1. J'
 Le programme principal se décompose en 4 parties.
 
 - L'initialisation de l'intervalle, du maillage et des fonctions.
-- L'assemblage de $\Vec{b}$.
+- L'assemblage de $\vec{b}$.
 - L'assemblage de $R$ et de $M$.
 - Le calcul et affichage de la solution.
 
 ## L'assemblage de $'\vec{b}'$ 
 Comme $\int_{a}^{b} f(x)\varphi_j(x) \, \mathrm{d}x = \sum\limits_{k=1}^{n}\int_{x_k}^{x_{k+1}} f(x)\varphi_j(x) \, \mathrm{d}x$, on introduit une boucle $for$ sur $k$ pour assembler $\vec{b}$. \\On pose alors $i_{glob} = i_{loc}+k-1$ pour pouvoir accéder à tous les indices de $\vec{b}$.\\
-Il suffit donc de sommer $b_{iglob}$ sur chaque intervalle $\left[x_{k},x_{k+1}\right]$ et cela $\forall i_{glob} \in \llbracket 1,n \rrbracket$.
+Il suffit donc de sommer $b_{iglob}$ sur chaque intervalle $\left[x_{k},x_{k+1}\right]$ et cela $\forall i_{glob} \in \left[ 1,n \right]$.
 
 On ajoute finalement les termes de bord pour le premier et dernier termes de $\Vec{b}$.
 
