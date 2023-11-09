@@ -26,7 +26,7 @@ u(a) = u(b) = 0
 
 ## Discretized Problem
 
-Let $`V_h \subset \mathcal{H}_{0}^1(\left]a,b\right[)`$ with dimension $n$, and $(\varphi_i){1\leq i\leq n}$ be a basis for $V_h$. We can represent $u$ as $u_h = \sum\limits_{i=1}^n c_i\varphi_i$. The variational form is then given by:
+Let $`V_h \subset \mathcal{H}_{0}^1(\left]a,b\right[)`$ with dimension $n$, and $`(\varphi_i)_{1\leq i\leq n}`$ be a basis for $V_h$. We can represent $u$ as $u_h = \sum\limits_{i=1}^n c_i\varphi_i$. The variational form is then given by:
 
 $`\begin{equation}
 \begin{cases}
@@ -55,11 +55,12 @@ R\vec{c} = \vec{b}
 ## Basis Functions $`\varphi`$
 
 The functions phi, phideriv, and their derivatives take parameters $x,x_m,k,i_{loc}$.
+
 $`\begin{cases}
 $x_m$ is the interval mesh: $x_m = \bigcup\limits_{i=1}^n \left[x_{i},x_{i+1}\right]$\\
 $k$ is the index of the desired $\varphi_k$\\
 $i_{loc}$ is the local interval number.
-\begin{cases}`$
+\end{cases}`$
 
 ## Numerical Integration
 
@@ -75,7 +76,7 @@ The main program consists of four parts:
 - Computation and display of the solution.
 
 ## Assembly of $`\vec{b}`$
-Since $\int_{a}^{b} f(x)\varphi_j(x) , \mathrm{d}x = \sum\limits_{k=1}^{n}\int_{x_k}^{x_{k+1}} f(x)\varphi_j(x) , \mathrm{d}x$, a loop over $k$ is introduced to assemble $\vec{b}$. Define $i_{glob} = i_{loc}+k-1$ to access all indices of $\Vec{b}$. Sum $b_{iglob}$ over each interval $\left[x_{k},x_{k+1}\right]$ for all $i_{glob} \in \llbracket 1,n \rrbracket$.
+Since $\int_{a}^{b} f(x)\varphi_j(x) , \mathrm{d}x = \sum\limits_{k=1}^{n}\int_{x_k}^{x_{k+1}} f(x)\varphi_j(x) , \mathrm{d}x$, a loop over $k$ is introduced to assemble $\vec{b}$. Define $i_{glob} = i_{loc+k-1}$ to access all indices of $\vec{b}$. Sum $b_{iglob}$ over each interval $\left[x_{k},x_{k+1}\right]$ for all $i_{glob} \in \left[ 1,n \right]$.
 
 ## Assembly of $R$
-Similar to the assembly of $\Vec{b}$, introduce the index $j_{glob} = j_{loc}+k-1$ when assembling $R$. The process is the same, with integration over different functions.
+Similar to the assembly of $\vec{b}$, introduce the index $j_{glob} = j_{loc+k-1}$ when assembling $R$. The process is the same, with integration over different functions.
