@@ -1,4 +1,4 @@
-# Finite-Elements
+# Finite Elements
 
 Variational Approximations of Elliptic Boundary Value Problems.
 
