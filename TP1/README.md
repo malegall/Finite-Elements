@@ -3,21 +3,26 @@
 ## Initial Problem
 
 We aim to solve the following differential equation on the interval $\left[a,b\right]$:
+
 $`\begin{equation}\begin{cases} -u'' = f\\ u(a) = u(b) = 0 \end{cases}\end{equation}`$
+
 The variational form is obtained by multiplying equation (1) by a function $v \in \mathcal{H}0^1(\left]a,b\right[)$ and integrating over $\left[a,b\right]$:
-\begin{equation}
+
+$`\begin{equation}
 \begin{cases}
 -\int{a}^{b} u''(x)v(x) , \mathrm{d}x = \int_{a}^{b} f(x)v(x) , \mathrm{d}x\
 u(a) = u(b) = 0
 \end{cases}
-\end{equation}
+\end{equation}`$
+
 After an integration by parts and using the initial conditions, it follows that:
-\begin{equation}
+
+$`\begin{equation}
 \begin{cases}
 \int_{a}^{b} u'(x)v'(x) , \mathrm{d}x = \int_{a}^{b} f(x)v(x) , \mathrm{d}x\
 u(a) = u(b) = 0
 \end{cases}
-\end{equation}
+\end{equation}`$
 
 ## Discretized Problem
 
