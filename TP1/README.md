@@ -55,11 +55,13 @@ R\vec{c} = \vec{b}
 ## Basis Functions $`\varphi`$
 
 The functions phi, phideriv, and their derivatives take parameters $x,x_m,k,i_{loc}$.
-
-$x_m$ is the interval mesh: $x_m = \bigcup\limits_{i=1}^n \left[x_{i},x_{i+1}\right]$
-$k$ is the index of the desired $\varphi_k$
+$`\begin{cases}
+$x_m$ is the interval mesh: $x_m = \bigcup\limits_{i=1}^n \left[x_{i},x_{i+1}\right]$\\
+$k$ is the index of the desired $\varphi_k$\\
 $i_{loc}$ is the local interval number.
-Numerical Integration
+\begin{cases}`$
+
+## Numerical Integration
 
 I chose the Simpson's method for integrating the functions $\varphi$ and $f$. It takes the function fun to be integrated, integration bounds $a,b$, and arguments required for the function fun.
 
@@ -67,10 +69,10 @@ I chose the Simpson's method for integrating the functions $\varphi$ and $f$. It
 
 The main program consists of four parts:
 
-Initialization of the interval, mesh, and functions.
-Assembly of $\vec{b}$.
-Assembly of $R$.
-Computation and display of the solution.
+- Initialization of the interval, mesh, and functions.
+- Assembly of $\vec{b}$.
+- Assembly of $R$.
+- Computation and display of the solution.
 
 ## Assembly of $`\vec{b}`$
 Since $\int_{a}^{b} f(x)\varphi_j(x) , \mathrm{d}x = \sum\limits_{k=1}^{n}\int_{x_k}^{x_{k+1}} f(x)\varphi_j(x) , \mathrm{d}x$, a loop over $k$ is introduced to assemble $\vec{b}$. Define $i_{glob} = i_{loc}+k-1$ to access all indices of $\Vec{b}$. Sum $b_{iglob}$ over each interval $\left[x_{k},x_{k+1}\right]$ for all $i_{glob} \in \llbracket 1,n \rrbracket$.
