@@ -45,9 +45,10 @@ b_j = \int{a}^{b} f(x)\varphi_j(x) , \mathrm{d}x\
 \end{equation}`$
 
 We obtain the matrix system:
-\begin{equation}
+
+$`\begin{equation}
 R\Vec{c} = \Vec{b}
-\end{equation}
+\end{equation}`$
 
 # MATLAB Programs
 
