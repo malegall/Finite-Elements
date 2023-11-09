@@ -76,9 +76,9 @@ The main program consists of four parts:
 ## Assembly of $`\vec{b}`$
 Since $\int_{a}^{b} f(x)\varphi_j(x) \mathrm{d}x = \sum\limits_{k=1}^{n}\int_{x_k}^{x_{k+1}} f(x)\varphi_j(x) \mathrm{d}x$, a loop over $k$ is introduced to assemble $\vec{b}$. 
 
-Define $i_{glob} = i_{loc+k-1}$ to access all indices of $\vec{b}$. 
+Define $i_{glob} = i_{loc}+k-1$ to access all indices of $\vec{b}$. 
 
 Sum $b_{iglob}$ over each interval $\left[x_{k},x_{k+1}\right]$ for all $i_{glob} \in \left[ 1,n \right]$.
 
 ## Assembly of $`R`$
-Similar to the assembly of $\vec{b}$, introduce the index $j_{glob} = j_{loc+k-1}$ when assembling $R$. The process is the same, with integration over different functions.
+Similar to the assembly of $\vec{b}$, introduce the index $j_{glob} = j_{loc}+k-1$ when assembling $R$. The process is the same, with integration over different functions.
