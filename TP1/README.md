@@ -3,12 +3,7 @@
 ## Initial Problem
 
 We aim to solve the following differential equation on the interval $\left[a,b\right]$:
-$$
-\begin{cases}
--u'' = f\
-u(a) = u(b) = 0
-\end{cases}
-$$
+$`\begin{cases} -u'' = f\ u(a) = u(b) = 0 \end{cases}`$
 The variational form is obtained by multiplying equation (1) by a function $v \in \mathcal{H}0^1(\left]a,b\right[)$ and integrating over $\left[a,b\right]$:
 \begin{equation}
 \begin{cases}
