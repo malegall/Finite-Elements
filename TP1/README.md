@@ -10,7 +10,7 @@ The variational form is obtained by multiplying equation (1) by a function $v \i
 
 $`\begin{equation}
 \begin{cases}
--\int{a}^{b} u''(x)v(x) , \mathrm{d}x = \int_{a}^{b} f(x)v(x) , \mathrm{d}x\
+-\int{a}^{b} u''(x)v(x) , \mathrm{d}x = \int_{a}^{b} f(x)v(x) , \mathrm{d}x\\
 u(a) = u(b) = 0
 \end{cases}
 \end{equation}`$
@@ -19,7 +19,7 @@ After an integration by parts and using the initial conditions, it follows that:
 
 $`\begin{equation}
 \begin{cases}
-\int_{a}^{b} u'(x)v'(x) , \mathrm{d}x = \int_{a}^{b} f(x)v(x) , \mathrm{d}x\
+\int_{a}^{b} u'(x)v'(x) , \mathrm{d}x = \int_{a}^{b} f(x)v(x) , \mathrm{d}x\\
 u(a) = u(b) = 0
 \end{cases}
 \end{equation}`$
@@ -27,27 +27,31 @@ u(a) = u(b) = 0
 ## Discretized Problem
 
 Let $V_h \subset \mathcal{H}0^1(\left]a,b\right[)$ with dimension $n$, and $(\varphi_i){1\leq i\leq n}$ be a basis for $V_h$. We can represent $u$ as $u_h = \sum\limits_{i=1}^n c_i\varphi_i$. The variational form is then given by:
-\begin{equation}
+
+$`\begin{equation}
 \begin{cases}
-\forall j \in \llbracket 1,n \rrbracket, \sum\limits_{i=1}^n c_i\int_a^b\varphi'i(x)\varphi'j(x) , \mathrm{d}x = \int{a}^{b} f(x)\varphi_j(x) , \mathrm{d}x\
+\forall j \in \llbracket 1,n \rrbracket, \sum\limits_{i=1}^n c_i\int_a^b\varphi'i(x)\varphi'j(x) , \mathrm{d}x = \int{a}^{b} f(x)\varphi_j(x) , \mathrm{d}x\\
 u_h(a) = u_h(b) = 0
 \end{cases}
-\end{equation}
+\end{equation}`$
+
 Defining:
-\begin{equation}
+
+$`\begin{equation}
 \begin{cases}
 R{i,j} = \int_a^b\varphi'_i(x)\varphi'j(x) , \mathrm{d}x\
 b_j = \int{a}^{b} f(x)\varphi_j(x) , \mathrm{d}x\
 \end{cases}
-\end{equation}
-we obtain the matrix system:
+\end{equation}`$
+
+We obtain the matrix system:
 \begin{equation}
 R\Vec{c} = \Vec{b}
 \end{equation}
 
 # MATLAB Programs
 
-## Basis Functions $\varphi$
+## Basis Functions $`\varphi`$
 
 The functions phi, phideriv, and their derivatives take parameters $x,x_m,k,i_{loc}$.
 
